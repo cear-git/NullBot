@@ -30,6 +30,9 @@ namespace NullBot
             {
                 if (e.Message.Content.ToLower().StartsWith(executor + "ping"))
                     await e.Message.RespondAsync("pong!");
+
+                if (e.Message.Content.ToLower().StartsWith(executor + "rps"))
+                    await e.Message.RespondAsync("Choose your weapon!");
             };
 
             bot.MessageDeleted += async e =>
